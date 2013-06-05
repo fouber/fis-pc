@@ -1,0 +1,30 @@
+{
+  "name": "fis-pc",
+  "version": "0.0.1",
+  "description": "Front End Integrated Solution for PC",
+  "main": "fis-pc.js",
+  "bin": {
+    "fis-pc": "bin/fis-pc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiangshouding/fis-pc.git"
+  },
+  "dependencies": {
+    "fis": "0.9.92",
+    "fis-preprocessor-extlang": "0.0.1",
+    "fis-preprocessor-require-async": "0.0.1",
+    "fis-optimizer-smarty-xss": "0.0.1",
+    "fis-parser-bdtmpl": "0.0.1",
+    "fis-parser-less": "0.0.5"
+  },
+  "keywords": [
+    "fis",
+    "fis-pc"
+  ],
+  "author": "fis",
+  "license": "MIT"
+}
