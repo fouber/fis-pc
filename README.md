@@ -54,7 +54,6 @@ more information:
     $ vim path/to/project/fis-conf.js
 
 ```javascript
-fis.config.require('pc');
 fis.config.merge({    //merge user settings
     //using namespace, it can be omitted.
     namespace : 'photo',
