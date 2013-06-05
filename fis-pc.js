@@ -72,6 +72,14 @@ fis.config.merge({
             {
                 reg: /^\/config\/.*/i,
                 release: '$&'
+            },
+            {
+                reg: "server.conf",
+                release: '/$&'
+            },
+            {
+                reg: /\/.+/i,
+                release: '$&'
             }
         ]
     },
