@@ -79,7 +79,7 @@ fis.config.merge({
             },
             {
                 reg: /\/.+/i,
-                release: '$&'
+                release: '/static$&'
             }
         ]
     },
