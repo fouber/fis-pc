@@ -1,10 +1,11 @@
 {
   "name": "fis-pc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Front End Integrated Solution for PC",
   "main": "fis-pc.js",
   "bin": {
-    "fis-pc": "bin/fis-pc"
+    "fis-pc": "bin/fis-pc",
+    "fisp": "bin/fis-pc"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,10 +15,10 @@
     "url": "https://github.com/xiangshouding/fis-pc.git"
   },
   "dependencies": {
-    "fis": "0.9.93",
+    "fis": "0.9.95",
     "fis-preprocessor-extlang": "0.0.1",
-    "fis-preprocessor-require-async": "0.0.1",
-    "fis-optimizer-smarty-xss": "0.0.1",
+    "fis-postprocessor-require-async": "0.0.1",
+    "fis-optimizer-smarty-xss": "0.0.2",
     "fis-parser-bdtmpl": "0.0.1",
     "fis-parser-less": "0.0.5"
   },

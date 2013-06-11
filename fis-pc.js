@@ -10,8 +10,11 @@ fis.config.merge({
             tmpl: 'bdtmpl'
         },
         preprocessor: {
-            tpl: 'extlang, require-async',
-            js: 'require-async'
+            tpl: 'extlang',
+        },
+        postprocessor: {
+            tpl: 'require-async',
+            js: 'jswrapper, require-async'
         },
         optimizer : {
             tpl : 'smarty-xss'
