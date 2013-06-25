@@ -17,7 +17,7 @@ fis.config.merge({
             js: 'jswrapper, require-async'
         },
         optimizer : {
-            tpl : 'smarty-xss'
+            tpl : 'smarty-xss,html-compress'
         }
     },
     roadmap : {
@@ -26,7 +26,8 @@ fis.config.merge({
         },
         path : [
             {
-                reg : /^\/test\//i
+                reg : /^\/test\/page\/(.+)/i,
+                release : '/test/page/${namespace}/$1'
             },
             {
                 reg : /\.tmpl$/i,
@@ -36,41 +37,36 @@ fis.config.merge({
                 reg : /^\/widget\/(.*\.tpl)$/i,
                 isMod : true,
                 url : 'widget/$1',
-                release : '/template/widget/$1'
+                release : '/template/widget/${namespace}/$1'
             },
             {
                 reg : /^\/widget\/(.*\.(js|css))$/i,
                 isMod : true,
-                release : '/static/widget/$1'
+                release : '/static/widget/${namespace}/$1'
             },
             {
                 reg : /^\/plugin\//i
             },
             {
-                reg : /^\/page\/.+\.tpl$/i,
+                reg : /^\/page\/(.+\.tpl)$/i,
                 isMod: true,
-                release : '/template$&',
+                release : '/template/page/${namespace}/$1',
                 extras: {
                     isPage: true
                 }
-            },
-            {
-                reg : /^\/.+\.tpl$/i,
-                isMod: true,
-                release : '/template$&'
             },
             {
                 reg : '${namespace}-map.json',
                 release : '/config/${namespace}-map.json'
             },
             {
-                reg : /\/static\/(?:[^/])+\/(ui|lib)\/(.*)/i,
+                reg : /\/static\/(?:[^/])+\/(lib)\/(.*)/i,
                 isMod: true,
                 release: '/static/${namespace}/$1/$2'
             },
             {
                 reg: /^\/static\/(.*)/i,
-                release: '/static/$1'
+                release: '/static/${namespace}/$1'
             },
             {
                 reg: /^\/config\/.*/i,
@@ -82,7 +78,7 @@ fis.config.merge({
             },
             {
                 reg: /\/.+/i,
-                release: '/static$&'
+                release: '/static/${namespace}$&'
             }
         ]
     },
