@@ -63,11 +63,6 @@ fis.config.merge({
                 release : '/config/${namespace}-map.json'
             },
             {
-                reg : /\/static\/(?:[^/])+\/(lib)\/(.*)/i,
-                isMod: true,
-                release: '/static/${namespace}/$1/$2'
-            },
-            {
                 reg: /^\/static\/(.*)/i,
                 release: '/static/${namespace}/$1'
             },
