@@ -26,11 +26,8 @@ fis.config.merge({
         },
         path : [
             {
-                reg : /^\/test\/page\/(.+)/i,
-                release : '/test/${namespace}/page/$1'
-            },
-            {
                 reg : /^\/test\/(.+)/i,
+                release : '/test/${namespace}/$1'
             },
             {
                 reg : /\.tmpl$/i,
@@ -65,6 +62,9 @@ fis.config.merge({
             {
                 reg: /^\/static\/(.*)/i,
                 release: '/static/${namespace}/$1'
+            },
+            {
+                reg: /\.(tpl|php|html|xhtml)$/i
             },
             {
                 reg: /^\/config\/.*/i,
