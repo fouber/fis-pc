@@ -27,7 +27,7 @@ fis.config.merge({
         path : [
             {
                 reg : /^\/test\/page\/(.+)/i,
-                release : '/test/page/${namespace}/$1'
+                release : '/test/${namespace}/page/$1'
             },
             {
                 reg : /^\/test\/(.+)/i,
@@ -40,12 +40,12 @@ fis.config.merge({
                 reg : /^\/widget\/(.*\.tpl)$/i,
                 isMod : true,
                 url : 'widget/${namespace}/$1',
-                release : '/template/widget/${namespace}/$1'
+                release : '/template/${namespace}/widget/$1'
             },
             {
                 reg : /^\/widget\/(.*\.(js|css))$/i,
                 isMod : true,
-                release : '/static/widget/${namespace}/$1'
+                release : '/static/${namespace}/widget/$1'
             },
             {
                 reg : /^\/plugin\//i
@@ -53,7 +53,7 @@ fis.config.merge({
             {
                 reg : /^\/page\/(.+\.tpl)$/i,
                 isMod: true,
-                release : '/template/page/${namespace}/$1',
+                release : '/template/${namespace}/page/$1',
                 extras: {
                     isPage: true
                 }
