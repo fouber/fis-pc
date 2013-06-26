@@ -30,6 +30,9 @@ fis.config.merge({
                 release : '/test/page/${namespace}/$1'
             },
             {
+                reg : /^\/test\/(.+)/i,
+            },
+            {
                 reg : /\.tmpl$/i,
                 release : false
             },
