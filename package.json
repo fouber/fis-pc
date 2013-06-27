@@ -15,11 +15,11 @@
     "url": "https://github.com/xiangshouding/fis-pc.git"
   },
   "dependencies": {
-    "fis": "0.10.10",
+    "fis": "0.10.12",
     "fis-preprocessor-extlang": "0.0.3",
     "fis-postprocessor-require-async": "0.0.3",
-    "fis-optimizer-smarty-xss": "0.0.2",
-    "fis-optimizer-html-compress": "0.0.1",
+    "fis-optimizer-smarty-xss": "0.0.3",
+    "fis-optimizer-html-compress": "0.0.2",
     "fis-parser-bdtmpl": "0.0.1",
     "fis-parser-less": "0.0.5"
   },
