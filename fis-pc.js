@@ -67,8 +67,8 @@ fis.config.merge({
                 reg: /\.(tpl|php|html|xhtml)$/i
             },
             {
-                reg: /^\/config\/.*/i,
-                release: '$&'
+                reg: /^\/config\/(.*)/i,
+                release: '/config/${namespace}/$1'
             },
             {
                 reg: "server.conf",
