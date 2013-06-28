@@ -10,7 +10,7 @@ fis.config.merge({
             tmpl: 'bdtmpl'
         },
         preprocessor: {
-            tpl: 'extlang',
+            tpl: 'extlang'
         },
         postprocessor: {
             tpl: 'require-async',
@@ -90,20 +90,6 @@ fis.config.merge({
         postprocessor : {
             jswrapper: {
                 type: 'amd'
-            }
-        },
-        optimizer : {
-            'smarty-xss' : {
-                'escapeMap' : {
-                    'js' : 'f_escape_js',
-                    'html' : 'f_escape_xml',
-                    'data' : 'f_escape_data',
-                    'path' : 'f_escape_path',
-                    'event' : 'f_escape_event',
-                    'no_escape' : 'escape:none'
-                },
-                'leftDelimiter' : '{%',
-                'rightDelimiter' : '%}'
             }
         }
     }
