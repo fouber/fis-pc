@@ -74,6 +74,10 @@ fis.config.merge({
                 reg: "server.conf",
                 release: '/$&'
             },
+			{
+                reg: "domain.conf",
+                release: '/config/$&'
+            },
             {
                 reg: /\/.+/i,
                 release: '/static/${namespace}$&'
