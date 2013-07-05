@@ -45,6 +45,11 @@ fis.config.merge({
                 release : '/static/${namespace}/widget/$1'
             },
             {
+                reg : /^\/widget\/(.*)$/i,
+                isMod : true,
+                release : '/static/${namespace}/widget/$1'
+            },
+            {
                 reg : /^\/plugin\//i
             },
             {
@@ -56,6 +61,11 @@ fis.config.merge({
                 }
             },
             {
+                reg : /^\/page\/(.*)$/i,
+                isMod: true,
+                release : '/template/${namespace}/page/$1'
+            },
+            {
                 reg : '${namespace}-map.json',
                 release : '/config/${namespace}-map.json'
             },
@@ -64,7 +74,7 @@ fis.config.merge({
                 release: '/static/${namespace}/$1'
             },
             {
-                reg: /\.(tpl|php|html|xhtml)$/i
+                reg: /\.(php)$/i
             },
             {
                 reg: /^\/config\/(.*)/i,
