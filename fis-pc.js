@@ -1,4 +1,3 @@
-
 var fis = module.exports = require('fis');
 
 fis.cli.name = "fis-pc";
@@ -26,14 +25,6 @@ fis.config.merge({
         },
         path : [
             {
-                reg : /^\/test\/(.+)/i,
-                release : '/test/${namespace}/$1'
-            },
-            {
-                reg : /\.tmpl$/i,
-                release : false
-            },
-            {
                 reg : /^\/widget\/(.*\.tpl)$/i,
                 isMod : true,
                 url : '${namespace}/widget/$1',
@@ -45,9 +36,6 @@ fis.config.merge({
                 release : '/static/${namespace}/widget/$1'
             },
             {
-                reg : /^\/plugin\//i
-            },
-            {
                 reg : /^\/page\/(.+\.tpl)$/i,
                 isMod: true,
                 release : '/template/${namespace}/page/$1',
@@ -56,30 +44,22 @@ fis.config.merge({
                 }
             },
             {
+                reg : /\.tmpl$/i,
+                release : false
+            },
+            {
+                reg: /^\/(static|config|test)\/(.*)/i,
+                release: '/$1/${namespace}/$2'
+            },
+            {
+                reg : /^\/(plugin|server\.conf$)|\.php$/i
+            },
+            {
                 reg : '${namespace}-map.json',
                 release : '/config/${namespace}-map.json'
             },
             {
-                reg: /^\/static\/(.*)/i,
-                release: '/static/${namespace}/$1'
-            },
-            {
-                reg: /\.(php)$/i
-            },
-            {
-                reg: /^\/config\/(.*)/i,
-                release: '/config/${namespace}/$1'
-            },
-            {
-                reg: "server.conf",
-                release: '/$&'
-            },
-			{
-                reg: "domain.conf",
-                release: '/config/$&'
-            },
-            {
-                reg: /\/.+/i,
+                reg: /^.+$/,
                 release: '/static/${namespace}$&'
             }
         ]
