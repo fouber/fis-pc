@@ -46,7 +46,6 @@ fis.config.merge({
             },
             {
                 reg : /^\/widget\/(.*)$/i,
-                isMod : true,
                 release : '/static/${namespace}/widget/$1'
             },
             {
@@ -62,7 +61,6 @@ fis.config.merge({
             },
             {
                 reg : /^\/page\/(.*)$/i,
-                isMod: true,
                 release : '/template/${namespace}/page/$1'
             },
             {
