@@ -45,10 +45,6 @@ fis.config.merge({
                 release : '/static/${namespace}/widget/$1'
             },
             {
-                reg : /^\/widget\/(.*)$/i,
-                release : '/static/${namespace}/widget/$1'
-            },
-            {
                 reg : /^\/plugin\//i
             },
             {
@@ -58,10 +54,6 @@ fis.config.merge({
                 extras: {
                     isPage: true
                 }
-            },
-            {
-                reg : /^\/page\/(.*)$/i,
-                release : '/template/${namespace}/page/$1'
             },
             {
                 reg : '${namespace}-map.json',
